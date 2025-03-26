@@ -15,7 +15,7 @@ pipeline {
     
     stage('Package the Application') {
       steps {
-        echo " Packaing the Application"
+        echo "Packaing the Application"
         sh 'mvn clean package'
             }
     }
@@ -40,11 +40,11 @@ pipeline {
             }
     }
 
-    stage('Deploy Application using Ansible') {
+ /*   stage('Deploy Application using Ansible') {
       steps {
         ansiblePlaybook credentialsId: 'private-key', disableHostKeyChecking: true, installation: 'ansible2', inventory: '/etc/ansible/hosts', playbook: 'deploy.yml', vaultTmpPath: ''
             }
-    }
+    } */
     
 
 
