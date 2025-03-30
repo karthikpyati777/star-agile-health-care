@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('CheckOut') {
       steps {
-        echo 'Checkout the source code from GitHub for karthik repo'
+        echo 'Checkout the source code from GitHub for karthik repository'
         git branch: 'master', url: 'https://github.com/karthikpyati777/star-agile-health-care.git'
             }
     }
