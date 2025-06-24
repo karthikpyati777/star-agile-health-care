@@ -18,7 +18,7 @@ spec:
       - name: capstone-app-container
         image: karthik854/medicure:7.0
         ports:
-        - containerPort: 8090
+        - containerPort: 8082
 ---
 apiVersion: v1
 kind: Service
@@ -29,6 +29,6 @@ spec:
     app: healthcare-app
   ports:
   - protocol: TCP
-    port: 8085
-    targetPort: 8090
+    port: 8091
+    targetPort: 8082
     type: NodePort
