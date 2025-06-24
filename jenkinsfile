@@ -22,7 +22,7 @@ pipeline {
     
     stage('Docker Image Creation') {
       steps {
-       sh 'docker build -t karthik854/medicure:7.0 .'
+       sh 'docker build -t karthik854/medicure:8.0 .'
             }
     }
 
@@ -36,7 +36,7 @@ pipeline {
 
      stage('Push Image to DockerHub') {
       steps {
-        sh 'docker push karthik854/medicure:7.0'
+        sh 'docker push karthik854/medicure:8.0'
             }
     }
      stage('Deploy Application using Ansible') {
