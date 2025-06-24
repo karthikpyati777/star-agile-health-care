@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: capstone-app-container
-        image: azharhashmi/medicure:7.0
+        image: karthik854/medicure:7.0
         ports:
         - containerPort: 8090
 ---
