@@ -44,5 +44,10 @@ pipeline {
         ansiblePlaybook credentialsId: 'private-key', disableHostKeyChecking: true, installation: 'Ansible2', inventory: '/etc/ansible/hosts', playbook: 'ansible-playbook.yml', vaultTmpPath: ''
             }
       }
+stage('K8S Deploye') {
+      steps {
+        sh 'kubectl apply -f spring-boot-deployment.yaml'
+            }
+    }
   }
 }
